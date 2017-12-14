@@ -10,9 +10,8 @@ def find_coords(cityName):
     API_ENDPOINT = "https://maps.googleapis.com/maps/api/geocode/json?address="+CITY_NAME+"&key="+MY_API_KEY
     r = requests.get(API_ENDPOINT).json()
     coordinates = r["results"][0]["geometry"]["location"]
-    latitude = coordinates["lat"]
-    longitude = coordinates["lng"]
-    #print cityName,": ", "latitude = ",latitude,", longitude = ",longitude
-    print cityName, ": ", coordinates
+    result = {"city": cityName, "coordinates": coordinates}
+    return result
+
 find_coords(CITY1_NAME)
 find_coords(CITY2_NAME)
