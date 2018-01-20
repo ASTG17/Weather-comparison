@@ -15,3 +15,5 @@ def find_coords(cityName):
 
 find_coords(CITY1_NAME)
 find_coords(CITY2_NAME)
+
+def find_avg_temps(cityResults)
